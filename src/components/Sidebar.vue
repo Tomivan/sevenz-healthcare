@@ -1,124 +1,73 @@
 <template>
- <sidebar-menu :menu="menu" />
+ <nav>
+   <router-link to="/">
+     <img src="../assets/dashboard.png" alt="" />
+     Dashboard
+   </router-link>
+   <router-link to="/#">
+     <img src="../assets/profile.png" alt="" />
+     Profile
+   </router-link>
+   <router-link to="/#">
+     <img src="../assets/services.png" alt="" />
+     Services
+   </router-link>
+   <router-link to="/#">
+     <img src="../assets/medical.png" alt="" />
+     Medical Records
+   </router-link>
+   <router-link to="/#">
+     <img src="../assets/wallet.png" alt="" />
+     Care Wallet
+   </router-link>
+   <router-link to="/#">
+     <img src="../assets/messages.png" alt="" />
+     Messages
+   </router-link>
+   <router-link to="/#">
+     <img src="../assets/resources.png" alt="" />
+     Resources
+   </router-link>
+    <hr />
+   <router-link to="/#">
+     <img src="../assets/account.png" alt="" />
+     Account Settings
+   </router-link>
+   <router-link to="/#">
+     <img src="../assets/contact.png" alt="" />
+     Contact Support
+   </router-link>
+   <router-link to="/#">
+     <img src="../assets/logout.png" alt="" />
+     Logout
+   </router-link>
+ </nav>
 </template>
 
 <script>
-import Dashboard from '@/assets/dashboard.png'
-import Account from '@/assets/account.png'
-import Contact from '@/assets/contact.png'
-import Logout from '@/assets/logout.png'
-import Medical from '@/assets/medical.png'
-import Messages from '@/assets/messages.png'
-import Profile from '@/assets/profile.png'
-import Resources from '@/assets/resources.png'
-import Services from '@/assets/services.png'
-import Wallet from '@/assets/wallet.png'
 
 export default {
-  name: 'Sidebar',
-  data() {
-      return {
-        menu: [
-          {
-            header: 'Main Navigation',
-            hiddenOnCollapse: true
-          },
-          {
-            href: '/',
-            title: 'Dashboard',
-            icon: {
-              element: 'img',
-              attributes: {src: Dashboard}
-            }
-          },
-          {
-            href: '/profile',
-            title: 'Profile',
-            icon: {
-              element: 'img',
-              attributes: {src: Profile}
-            }
-          },
-          {
-            href: '/services',
-            title: 'Services',
-            icon: {
-              element: 'img',
-              attributes: {src: Services}
-            }
-          },
-          {
-            href: '/medical-records',
-            title: 'Medical Records',
-            icon: {
-              element: 'img',
-              attributes: {src: Medical}
-            }
-          },
-          {
-            href: '/care-wallet',
-            title: 'Care Wallet',
-            icon: {
-              element: 'img',
-              attributes: {src: Wallet}
-            }
-          },
-          {
-            href: '/messages',
-            title: 'Messages',
-            icon: {
-              element: 'img',
-              attributes: {src: Messages}
-            }
-          },
-          {
-            href: '/resources',
-            title: 'Resources',
-            icon: {
-              element: 'img',
-              attributes: {src: Resources}
-            }
-          },
-          {
-            href: '/account-settings',
-            title: 'Account Settings',
-            icon: {
-              element: 'img',
-              attributes: {src: Account}
-            }
-          },
-          {
-            href: '/contact-support',
-            title: 'Contact Support',
-            icon: {
-              element: 'img',
-              attributes: {src: Contact}
-            }
-          },
-          {
-            href: '/logout',
-            title: 'Logout',
-            icon: {
-              element: 'img',
-              attributes: {src: Logout}
-            }
-          }
-        ]
-      }
-    }
+  name: 'Sidebar'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.v-sidebar-menu{
-  background: #ffffff;
+nav{
+  display: flex;
+  flex-direction: column;
   border-right: 1px solid #0000001e;
+  height: 85vh;
+  width: 15vw;
+  padding-top: 4em;
+  padding-left: 1em;
 }
-.vsm--link .vsm--link_level-1{
-  color: #000000;
+img{
+  margin-right: 5%;
+  height: 2vh;
+  width: 1vw;
 }
-.vsm--icon{
-  background-color: none !important;
-} 
+router-link{
+  margin-bottom: 7%;
+}
 </style>
